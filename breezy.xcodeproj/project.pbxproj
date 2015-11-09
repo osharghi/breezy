@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0054A801BF1456600664BBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0054A7F1BF1456600664BBD /* AppDelegate.swift */; };
+		B0054A821BF1456600664BBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0054A811BF1456600664BBD /* ViewController.swift */; };
+		B0054A851BF1456600664BBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0054A831BF1456600664BBD /* Main.storyboard */; };
+		B0054A871BF1456600664BBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0054A861BF1456600664BBD /* Assets.xcassets */; };
+		B0054A8A1BF1456600664BBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0054A881BF1456600664BBD /* LaunchScreen.storyboard */; };
+		B0054A951BF1456600664BBD /* breezyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0054A941BF1456600664BBD /* breezyTests.swift */; };
+		B0054AA01BF1456600664BBD /* breezyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0054A9F1BF1456600664BBD /* breezyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0054A911BF1456600664BBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0054A741BF1456600664BBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0054A7B1BF1456600664BBD;
+			remoteInfo = breezy;
+		};
+		B0054A9C1BF1456600664BBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0054A741BF1456600664BBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0054A7B1BF1456600664BBD;
+			remoteInfo = breezy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B0054A7C1BF1456600664BBD /* breezy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breezy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0054A7F1BF1456600664BBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B0054A811BF1456600664BBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0054A841BF1456600664BBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0054A861BF1456600664BBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0054A891BF1456600664BBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0054A8B1BF1456600664BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0054A901BF1456600664BBD /* breezyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = breezyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0054A941BF1456600664BBD /* breezyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = breezyTests.swift; sourceTree = "<group>"; };
+		B0054A961BF1456600664BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0054A9B1BF1456600664BBD /* breezyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = breezyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0054A9F1BF1456600664BBD /* breezyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = breezyUITests.swift; sourceTree = "<group>"; };
+		B0054AA11BF1456600664BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0054A791BF1456600664BBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0054A8D1BF1456600664BBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0054A981BF1456600664BBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0054A731BF1456600664BBD = {
+			isa = PBXGroup;
+			children = (
+				B0054A7E1BF1456600664BBD /* breezy */,
+				B0054A931BF1456600664BBD /* breezyTests */,
+				B0054A9E1BF1456600664BBD /* breezyUITests */,
+				B0054A7D1BF1456600664BBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0054A7D1BF1456600664BBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0054A7C1BF1456600664BBD /* breezy.app */,
+				B0054A901BF1456600664BBD /* breezyTests.xctest */,
+				B0054A9B1BF1456600664BBD /* breezyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0054A7E1BF1456600664BBD /* breezy */ = {
+			isa = PBXGroup;
+			children = (
+				B0054A7F1BF1456600664BBD /* AppDelegate.swift */,
+				B0054A811BF1456600664BBD /* ViewController.swift */,
+				B0054A831BF1456600664BBD /* Main.storyboard */,
+				B0054A861BF1456600664BBD /* Assets.xcassets */,
+				B0054A881BF1456600664BBD /* LaunchScreen.storyboard */,
+				B0054A8B1BF1456600664BBD /* Info.plist */,
+			);
+			path = breezy;
+			sourceTree = "<group>";
+		};
+		B0054A931BF1456600664BBD /* breezyTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0054A941BF1456600664BBD /* breezyTests.swift */,
+				B0054A961BF1456600664BBD /* Info.plist */,
+			);
+			path = breezyTests;
+			sourceTree = "<group>";
+		};
+		B0054A9E1BF1456600664BBD /* breezyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B0054A9F1BF1456600664BBD /* breezyUITests.swift */,
+				B0054AA11BF1456600664BBD /* Info.plist */,
+			);
+			path = breezyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0054A7B1BF1456600664BBD /* breezy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0054AA41BF1456600664BBD /* Build configuration list for PBXNativeTarget "breezy" */;
+			buildPhases = (
+				B0054A781BF1456600664BBD /* Sources */,
+				B0054A791BF1456600664BBD /* Frameworks */,
+				B0054A7A1BF1456600664BBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = breezy;
+			productName = breezy;
+			productReference = B0054A7C1BF1456600664BBD /* breezy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0054A8F1BF1456600664BBD /* breezyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0054AA71BF1456600664BBD /* Build configuration list for PBXNativeTarget "breezyTests" */;
+			buildPhases = (
+				B0054A8C1BF1456600664BBD /* Sources */,
+				B0054A8D1BF1456600664BBD /* Frameworks */,
+				B0054A8E1BF1456600664BBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0054A921BF1456600664BBD /* PBXTargetDependency */,
+			);
+			name = breezyTests;
+			productName = breezyTests;
+			productReference = B0054A901BF1456600664BBD /* breezyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B0054A9A1BF1456600664BBD /* breezyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0054AAA1BF1456600664BBD /* Build configuration list for PBXNativeTarget "breezyUITests" */;
+			buildPhases = (
+				B0054A971BF1456600664BBD /* Sources */,
+				B0054A981BF1456600664BBD /* Frameworks */,
+				B0054A991BF1456600664BBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0054A9D1BF1456600664BBD /* PBXTargetDependency */,
+			);
+			name = breezyUITests;
+			productName = breezyUITests;
+			productReference = B0054A9B1BF1456600664BBD /* breezyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0054A741BF1456600664BBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Omid Sharghi";
+				TargetAttributes = {
+					B0054A7B1BF1456600664BBD = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					B0054A8F1BF1456600664BBD = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = B0054A7B1BF1456600664BBD;
+					};
+					B0054A9A1BF1456600664BBD = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = B0054A7B1BF1456600664BBD;
+					};
+				};
+			};
+			buildConfigurationList = B0054A771BF1456600664BBD /* Build configuration list for PBXProject "breezy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0054A731BF1456600664BBD;
+			productRefGroup = B0054A7D1BF1456600664BBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0054A7B1BF1456600664BBD /* breezy */,
+				B0054A8F1BF1456600664BBD /* breezyTests */,
+				B0054A9A1BF1456600664BBD /* breezyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0054A7A1BF1456600664BBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0054A8A1BF1456600664BBD /* LaunchScreen.storyboard in Resources */,
+				B0054A871BF1456600664BBD /* Assets.xcassets in Resources */,
+				B0054A851BF1456600664BBD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0054A8E1BF1456600664BBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0054A991BF1456600664BBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0054A781BF1456600664BBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0054A821BF1456600664BBD /* ViewController.swift in Sources */,
+				B0054A801BF1456600664BBD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0054A8C1BF1456600664BBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0054A951BF1456600664BBD /* breezyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0054A971BF1456600664BBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0054AA01BF1456600664BBD /* breezyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0054A921BF1456600664BBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0054A7B1BF1456600664BBD /* breezy */;
+			targetProxy = B0054A911BF1456600664BBD /* PBXContainerItemProxy */;
+		};
+		B0054A9D1BF1456600664BBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0054A7B1BF1456600664BBD /* breezy */;
+			targetProxy = B0054A9C1BF1456600664BBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B0054A831BF1456600664BBD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0054A841BF1456600664BBD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0054A881BF1456600664BBD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0054A891BF1456600664BBD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0054AA21BF1456600664BBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0054AA31BF1456600664BBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0054AA51BF1456600664BBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = breezy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = odimo.breezy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B0054AA61BF1456600664BBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = breezy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = odimo.breezy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B0054AA81BF1456600664BBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = breezyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = odimo.breezyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breezy.app/breezy";
+			};
+			name = Debug;
+		};
+		B0054AA91BF1456600664BBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = breezyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = odimo.breezyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/breezy.app/breezy";
+			};
+			name = Release;
+		};
+		B0054AAB1BF1456600664BBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = breezyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = odimo.breezyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = breezy;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B0054AAC1BF1456600664BBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = breezyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = odimo.breezyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = breezy;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0054A771BF1456600664BBD /* Build configuration list for PBXProject "breezy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0054AA21BF1456600664BBD /* Debug */,
+				B0054AA31BF1456600664BBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0054AA41BF1456600664BBD /* Build configuration list for PBXNativeTarget "breezy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0054AA51BF1456600664BBD /* Debug */,
+				B0054AA61BF1456600664BBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B0054AA71BF1456600664BBD /* Build configuration list for PBXNativeTarget "breezyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0054AA81BF1456600664BBD /* Debug */,
+				B0054AA91BF1456600664BBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B0054AAA1BF1456600664BBD /* Build configuration list for PBXNativeTarget "breezyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0054AAB1BF1456600664BBD /* Debug */,
+				B0054AAC1BF1456600664BBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0054A741BF1456600664BBD /* Project object */;
+}
