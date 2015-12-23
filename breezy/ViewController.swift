@@ -4,13 +4,12 @@
 //
 //  Created by Allahe Sharghi on 11/9/15.
 //  Copyright © 2015 Omid Sharghi. All rights reserved.
-// hello
 
 import UIKit
 import MapKit
 import CoreLocation
 
-
+//Hello1
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
