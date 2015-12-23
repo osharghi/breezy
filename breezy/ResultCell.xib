@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="42" id="2a6-qk-ILa" customClass="ResultCell" customModule="breezy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="346" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2a6-qk-ILa" id="aot-ff-urE">
+                <rect key="frame" x="0.0" y="0.0" width="346" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3t0-0U-095">
+                        <rect key="frame" x="13" y="3" width="60.5" height="16.5"/>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="companyLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUi-Jr-bbG">
+                        <rect key="frame" x="13" y="32" width="80.5" height="16.5"/>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="descriptionLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rci-Gi-tsL">
+                        <rect key="frame" x="13" y="46" width="268.5" height="16.5"/>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfi-8s-PRp">
+                        <rect key="frame" x="304" y="-3" width="30" height="29"/>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                        <state key="normal" title="Email"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titleLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYm-qA-gwU">
+                        <rect key="frame" x="13" y="18" width="52" height="16.5"/>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rci-Gi-tsL" firstAttribute="top" secondItem="yUi-Jr-bbG" secondAttribute="bottom" constant="-2.5" id="05P-Ek-oUR"/>
+                    <constraint firstItem="cYm-qA-gwU" firstAttribute="top" secondItem="3t0-0U-095" secondAttribute="bottom" constant="-1.5" id="5HF-oC-s3C"/>
+                    <constraint firstItem="3t0-0U-095" firstAttribute="top" secondItem="aot-ff-urE" secondAttribute="topMargin" constant="-5" id="LBl-ff-Bjf"/>
+                    <constraint firstItem="rci-Gi-tsL" firstAttribute="leading" secondItem="aot-ff-urE" secondAttribute="leadingMargin" constant="5" id="WJ2-dw-Nb0"/>
+                    <constraint firstItem="yUi-Jr-bbG" firstAttribute="leading" secondItem="aot-ff-urE" secondAttribute="leadingMargin" constant="5" id="aei-bj-Xl0"/>
+                    <constraint firstItem="3t0-0U-095" firstAttribute="leading" secondItem="aot-ff-urE" secondAttribute="leadingMargin" constant="5" id="dlS-Rm-gtK"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Hfi-8s-PRp" secondAttribute="trailing" constant="4" id="dqJ-Ys-ujY"/>
+                    <constraint firstItem="yUi-Jr-bbG" firstAttribute="top" secondItem="cYm-qA-gwU" secondAttribute="bottom" constant="-2.5" id="dyj-hR-AVT"/>
+                    <constraint firstItem="Hfi-8s-PRp" firstAttribute="top" secondItem="aot-ff-urE" secondAttribute="topMargin" constant="-11" id="gkL-cU-1cX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rci-Gi-tsL" secondAttribute="trailing" constant="56.5" id="hYZ-7L-zwH"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="3t0-0U-095" secondAttribute="bottom" constant="36.5" id="uet-wY-eSg"/>
+                    <constraint firstItem="cYm-qA-gwU" firstAttribute="leading" secondItem="aot-ff-urE" secondAttribute="leadingMargin" constant="5" id="y3t-cE-ECZ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="rci-Gi-tsL" secondAttribute="bottom" constant="-1" id="zgf-KO-5dp"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="uet-wY-eSg"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="companyLabel" destination="yUi-Jr-bbG" id="Uja-Ne-4eh"/>
+                <outlet property="descriptionLabel" destination="rci-Gi-tsL" id="vHa-Qa-lmu"/>
+                <outlet property="nameLabel" destination="3t0-0U-095" id="dVV-iZ-6Qi"/>
+                <outlet property="titleLabel" destination="cYm-qA-gwU" id="7yr-Ep-N2c"/>
+            </connections>
+            <point key="canvasLocation" x="638" y="273"/>
+        </tableViewCell>
+    </objects>
+</document>
