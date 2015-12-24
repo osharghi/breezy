@@ -169,56 +169,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pr9-X6-9j4">
-                                <rect key="frame" x="68" y="147" width="464" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your business name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Q0-xU-lxc">
-                                <rect key="frame" x="68" y="108" width="464" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zKm-95-CBk">
-                                <rect key="frame" x="68" y="187" width="464" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lim-R3-pW5">
-                                <rect key="frame" x="68" y="226" width="464" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSe-sx-YH0">
-                                <rect key="frame" x="285" y="259" width="30" height="28"/>
+                                <rect key="frame" x="25" y="265" width="30" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextPressed:" destination="8rD-68-M9c" eventType="touchUpInside" id="cdL-L4-eMn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tO-wd-007">
+                                <rect key="frame" x="25" y="293" width="62" height="16"/>
+                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" red="0.96769040822982788" green="0.12388651818037033" blue="0.049100987613201141" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pr9-X6-9j4">
+                                <rect key="frame" x="25" y="148" width="550" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your business name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Q0-xU-lxc">
+                                <rect key="frame" x="25" y="110" width="550" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zKm-95-CBk">
+                                <rect key="frame" x="25" y="190" width="550" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lim-R3-pW5">
+                                <rect key="frame" x="25" y="228" width="550" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OSe-sx-YH0" firstAttribute="top" secondItem="Lim-R3-pW5" secondAttribute="bottom" constant="3" id="2TJ-DK-CaF"/>
+                            <constraint firstItem="OSe-sx-YH0" firstAttribute="top" secondItem="Lim-R3-pW5" secondAttribute="bottom" constant="7" id="2TJ-DK-CaF"/>
+                            <constraint firstItem="8tO-wd-007" firstAttribute="top" secondItem="OSe-sx-YH0" secondAttribute="bottom" id="7Zl-JN-Ob9"/>
+                            <constraint firstItem="8tO-wd-007" firstAttribute="leading" secondItem="NGg-4M-fVN" secondAttribute="leadingMargin" constant="5" id="APk-eX-Wl9"/>
+                            <constraint firstItem="8tO-wd-007" firstAttribute="top" secondItem="OSe-sx-YH0" secondAttribute="bottom" constant="2" id="Cqs-gr-C7F"/>
+                            <constraint firstItem="OSe-sx-YH0" firstAttribute="leading" secondItem="NGg-4M-fVN" secondAttribute="leadingMargin" constant="5" id="Ehj-97-9XM"/>
                             <constraint firstItem="Pr9-X6-9j4" firstAttribute="centerX" secondItem="NGg-4M-fVN" secondAttribute="centerX" id="GFd-Zk-0Ht"/>
                             <constraint firstItem="zKm-95-CBk" firstAttribute="centerX" secondItem="NGg-4M-fVN" secondAttribute="centerX" id="RVR-VJ-HX9"/>
-                            <constraint firstItem="zKm-95-CBk" firstAttribute="leading" secondItem="NGg-4M-fVN" secondAttribute="leadingMargin" constant="48" id="Rk9-Mj-tmG"/>
-                            <constraint firstItem="OSe-sx-YH0" firstAttribute="centerX" secondItem="NGg-4M-fVN" secondAttribute="centerX" id="RnA-Uf-77V"/>
+                            <constraint firstItem="zKm-95-CBk" firstAttribute="leading" secondItem="NGg-4M-fVN" secondAttribute="leadingMargin" constant="5" id="Rk9-Mj-tmG"/>
+                            <constraint firstItem="OSe-sx-YH0" firstAttribute="centerX" secondItem="NGg-4M-fVN" secondAttribute="centerX" constant="-217" id="RnA-Uf-77V"/>
                             <constraint firstItem="Lim-R3-pW5" firstAttribute="centerX" secondItem="NGg-4M-fVN" secondAttribute="centerX" id="Ud1-se-d4D"/>
-                            <constraint firstItem="zKm-95-CBk" firstAttribute="top" secondItem="Pr9-X6-9j4" secondAttribute="bottom" constant="10" id="Wy4-Ul-kFz"/>
-                            <constraint firstItem="Pr9-X6-9j4" firstAttribute="leading" secondItem="NGg-4M-fVN" secondAttribute="leadingMargin" constant="48" id="akE-bq-Bms"/>
-                            <constraint firstItem="Lim-R3-pW5" firstAttribute="leading" secondItem="NGg-4M-fVN" secondAttribute="leadingMargin" constant="48" id="b6Q-Ie-RIN"/>
-                            <constraint firstItem="7Q0-xU-lxc" firstAttribute="leading" secondItem="NGg-4M-fVN" secondAttribute="leadingMargin" constant="48" id="iGA-ti-xMh"/>
-                            <constraint firstItem="7Q0-xU-lxc" firstAttribute="top" secondItem="pyo-CM-w5g" secondAttribute="bottom" constant="44" id="q6m-EV-pmd"/>
+                            <constraint firstItem="zKm-95-CBk" firstAttribute="top" secondItem="Pr9-X6-9j4" secondAttribute="bottom" constant="12" id="Wy4-Ul-kFz"/>
+                            <constraint firstItem="Pr9-X6-9j4" firstAttribute="leading" secondItem="NGg-4M-fVN" secondAttribute="leadingMargin" constant="5" id="akE-bq-Bms"/>
+                            <constraint firstItem="Lim-R3-pW5" firstAttribute="leading" secondItem="NGg-4M-fVN" secondAttribute="leadingMargin" constant="5" id="b6Q-Ie-RIN"/>
+                            <constraint firstItem="7Q0-xU-lxc" firstAttribute="leading" secondItem="NGg-4M-fVN" secondAttribute="leadingMargin" constant="5" id="iGA-ti-xMh"/>
+                            <constraint firstItem="7Q0-xU-lxc" firstAttribute="top" secondItem="pyo-CM-w5g" secondAttribute="bottom" constant="46" id="q6m-EV-pmd"/>
                             <constraint firstItem="7Q0-xU-lxc" firstAttribute="centerX" secondItem="NGg-4M-fVN" secondAttribute="centerX" id="r8E-Bj-fl1"/>
-                            <constraint firstItem="Pr9-X6-9j4" firstAttribute="top" secondItem="7Q0-xU-lxc" secondAttribute="bottom" constant="9" id="wak-xL-WPb"/>
-                            <constraint firstItem="Lim-R3-pW5" firstAttribute="top" secondItem="pyo-CM-w5g" secondAttribute="bottom" constant="162" id="y6a-9A-32X"/>
+                            <constraint firstItem="Pr9-X6-9j4" firstAttribute="top" secondItem="7Q0-xU-lxc" secondAttribute="bottom" constant="8" id="wak-xL-WPb"/>
+                            <constraint firstItem="Lim-R3-pW5" firstAttribute="top" secondItem="pyo-CM-w5g" secondAttribute="bottom" constant="164" id="y6a-9A-32X"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RnA-Uf-77V"/>
+                                <exclude reference="Cqs-gr-C7F"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="businessField" destination="7Q0-xU-lxc" id="lgI-5A-sVX"/>
                         <outlet property="emailField" destination="Pr9-X6-9j4" id="TAj-DP-50o"/>
+                        <outlet property="errorLabel" destination="8tO-wd-007" id="bs4-dt-nij"/>
                         <outlet property="password2Field" destination="Lim-R3-pW5" id="I7g-Go-V3z"/>
                         <outlet property="passwordField" destination="zKm-95-CBk" id="a1e-HX-adN"/>
                         <segue destination="ncw-fW-QLl" kind="show" identifier="next1" id="la0-6T-vfQ"/>

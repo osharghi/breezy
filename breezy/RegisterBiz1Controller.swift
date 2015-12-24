@@ -24,6 +24,7 @@ class RegisterBiz1Controller: UIViewController, UITextViewDelegate {
     @IBOutlet weak var bizDescriptionTextView: UITextView!
     
     var userInfo: Dictionary<String, String>?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,69 +43,77 @@ class RegisterBiz1Controller: UIViewController, UITextViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func checkValue(input: String?) -> String? {
-        if let input = input {
-            return input == "" ? nil : input
-            // if its "" return nil, otherwise return input
-        }
-        return nil
-    }
-    
-    func isValidString(testStr:String) -> Bool {
-        // println("validate calendar: \(testStr)")
-        // . is equla to any character
-        // * any length 0 through whatever
-        // ^ none of the folloiwng
-        let stringRegEx = ".*[^A-Za-z0-9].*"
-        
-        let stringTest = NSPredicate(format:"SELF MATCHES %@", stringRegEx)
-        
-        return stringTest.evaluateWithObject(testStr)
-    }
-    
-    func convertIntToString(input: Int?) -> String? {
-        if let input = input {
-            let newInput = String(input)
-            return newInput == "" ? nil : newInput
-            // if its "" return nil, otherwise return input
-        }
-        return nil
-    }
-    
-    func removeSpaces(input: String?) -> String? {
-        
-        if let input = input {
-            let newInput = input.stringByReplacingOccurrencesOfString(" ", withString: "")
-            print("\(newInput)")
-            return newInput == "" ? nil: newInput
-        }
-        return nil
-    }
-    
     func inputValidation() -> [String:String]?
     {
         var userInfo: [String:String]?
-        if let firstName = checkValue(firstNameField.text)
+        do
         {
-            if let title = checkValue(titleField.text)
+            if let firstName = try validateName(firstNameField.text)
             {
-                if let zipCode = checkValue(zipTextField.text)
+                do
                 {
-                    if let employeeNumber = checkValue(employeeNumberTextField.text)
+                    if let title = try validateTitle(titleField.text)
                     {
-                        if let skills = removeSpaces(skillsTextField.text)
+                        do
                         {
-                            if let bizDesc = checkValue(bizDescriptionTextView.text)
+                            if let zipCode = try validateZip(zipTextField.text)
                             {
-                                userInfo = ["firstName": firstName, "title": title, "bizDesc":bizDesc, "employeeNumber": employeeNumber, "zipCode": zipCode, "skills": skills]
-                                return userInfo!
-                                
+                                do
+                                {
+                                    if let employeeNumber = try validateEmployeeNumber(employeeNumberTextField.text)
+                                    {
+                                        do
+                                        {
+                                            if let skills = try validateSkills(skillsTextField.text)
+                                            {
+                                                do
+                                                {
+                                                    if let bizDesc = try validateBizDesc(bizDescriptionTextView.text)
+                                                    {
+                                                        userInfo = ["firstName": firstName, "title": title, "bizDesc":bizDesc, "employeeNumber": employeeNumber, "zipCode": zipCode, "skills": skills]
+                                                        return userInfo!
+                                                        
+                                                    }
+                                                }
+                                                catch let error
+                                                {
+                                                    //BizDesc error
+                                                    print(error)
+                                                }
+                                            }
+                                        }
+                                        catch let error
+                                        {
+                                            //Skills error
+                                            print(error)
+                                        }
+                                    }
+                                }
+                                catch let error
+                                {
+                                    //Employee # error
+                                    print(error)
+                                }
                             }
+                        }
+                        catch let error
+                        {
+                            //Zip error
+                            print(error)
                         }
                     }
                 }
-
+                catch let error
+                {
+                    //Title error
+                    print(error)
+                }
             }
+        }
+        catch let error
+        {
+            //Name Error
+            print(error)
         }
         
         return nil
@@ -134,51 +143,8 @@ class RegisterBiz1Controller: UIViewController, UITextViewDelegate {
         }
     }
     
-    
-    
-//    @IBAction func nextPressed(sender: AnyObject) {
-//        
-//        if let firstName = checkValue(firstNameField.text)
-//        {
-//            if let title = checkValue(titleField.text)
-//            {
-//                if let zipAddress = checkValue(zipTextField.text)
-//                {
-//                    if let employeeNumber = checkValue(employeeNumberTextField.text)
-//                    {
-//                        if let skills = removeSpaces(skillsTextField.text)
-//                        {
-//                            if let bizDesc = checkValue(bizDescriptionTextView.text)
-//                            {
-//                                let register2 = RegisterRequest2(firstName: firstName, title: title, zipCode: zipAddress, employeeNumber: employeeNumber, bizDesc: bizDesc, skills: skills) {
-//                                    result in
-//                                    
-//                                    if case .Success (let user) = result {
-//                                        self.userInfo = user.userInfo
-//                                        print("EMAIL Is \(self.userInfo!["email"])")
-//                                        print("SUCCESS")
-//                                        dispatch_async(dispatch_get_main_queue()) {
-//                                            self.performSegueWithIdentifier("profile", sender: nil)
-//                                        }
-//                                    }
-//                                    else if case .Error(let reason) = result {
-//                                        print(reason.message)
-//                                    }
-//                                }
-//                                
-//                                NetworkClient.instance.process(register2)
-//                                
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//            
-//        }
-//        
-//    }
-    
-    
+
+
     func textViewDidBeginEditing(textView: UITextView) {
         
         if textView.textColor == UIColor.lightGrayColor()

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F3AD1801C05689A00DFD663 /* RegBizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AD17F1C05689A00DFD663 /* RegBizViewController.swift */; };
 		4F6ADD531C06B0670024180E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6ADD521C06B0670024180E /* APIClient.swift */; };
+		4FAF8DA31C2B128D0002694E /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF8DA21C2B128D0002694E /* Validations.swift */; };
 		4FB324AD1C19216900B50885 /* ResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB324AC1C19216900B50885 /* ResultCell.xib */; };
 		4FB324B31C19232A00B50885 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB324B21C19232A00B50885 /* ResultCell.swift */; };
 		4FC1E2C11C2246C300A949BA /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC1E2C01C2246C300A949BA /* Profile.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		4F3AD17F1C05689A00DFD663 /* RegBizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegBizViewController.swift; path = ../RegBizViewController.swift; sourceTree = "<group>"; };
 		4F6ADD521C06B0670024180E /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		4FAF8DA21C2B128D0002694E /* Validations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		4FB324AC1C19216900B50885 /* ResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultCell.xib; sourceTree = "<group>"; };
 		4FB324B21C19232A00B50885 /* ResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultCell.swift; path = ../ResultCell.swift; sourceTree = "<group>"; };
 		4FC1E2C01C2246C300A949BA /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				4FB324B21C19232A00B50885 /* ResultCell.swift */,
 				4FB324AC1C19216900B50885 /* ResultCell.xib */,
 				4F6ADD521C06B0670024180E /* APIClient.swift */,
+				4FAF8DA21C2B128D0002694E /* Validations.swift */,
 				4FF93C691C1A67A400B48A8C /* EmailManager.swift */,
 				4FFF609D1C232520004AD1B8 /* Login.swift */,
 				4F3AD17F1C05689A00DFD663 /* RegBizViewController.swift */,
@@ -293,6 +296,7 @@
 				4FD1D8741C189D0B00F23FFF /* SearchResult.swift in Sources */,
 				4FB324B31C19232A00B50885 /* ResultCell.swift in Sources */,
 				4FC1E2C11C2246C300A949BA /* Profile.swift in Sources */,
+				4FAF8DA31C2B128D0002694E /* Validations.swift in Sources */,
 				4F3AD1801C05689A00DFD663 /* RegBizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
