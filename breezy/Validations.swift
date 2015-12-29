@@ -8,13 +8,188 @@
 
 import Foundation
 
+struct ValidationMessage {
+    let field: String             // name of the field with a problem
+    let localizedMessage: String  // show to user
+}
 
-enum Register: ErrorType {
+struct ValidationError: ErrorType {
+    let problems: [ValidationMessage]
+}
+
+func validateString2(input: String?) -> [ValidationMessage] {
+    var problems: [ValidationMessage] = []
+
+    if let input = input {
+        if input != ""
+        {
+            return problems
+            //            return input == "" ? nil : input
+            // if its "" return nil, otherwise return input
+        }
+        else {
+            problems.append(ValidationMessage(field: "Business", localizedMessage: NSLocalizedString("The format of business is invalid.", comment: "Registration error message")))
+        }
+    }
+    return problems
+}
+
+func validatePassword2(password: String?) -> [ValidationMessage] {
     
-    case InvalidEmail
-    case InvalidPassword
-    case InvalidPasswordMatch
-    case InvalidBusiness
+    var problems: [ValidationMessage] = []
+    if let password = password
+    {
+        let passwordRegEx = ".{5,32}"
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
+        if (passwordTest.evaluateWithObject(password))
+        {
+            return problems
+        }
+        else
+        {
+            problems.append(ValidationMessage(field: "password", localizedMessage: NSLocalizedString("The format of password is invalid.", comment: "Registration error message")))
+        }
+    }
+    return problems
+}
+
+func validatePasswordMatch2(password:String?, confirmed: String?) -> [ValidationMessage]
+{
+    var problems: [ValidationMessage] = []
+    
+    if password != confirmed {
+        problems.append(ValidationMessage(field: "password", localizedMessage: NSLocalizedString("The passwords do not match.", comment: "Registration error message")))
+    }
+    return problems
+    
+}
+
+func validateEmail2(input: String?) -> [ValidationMessage] {
+    
+    var problems: [ValidationMessage] = []
+    if let input = input
+    {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        if (emailTest.evaluateWithObject(input))
+        {
+            return problems
+        }
+        else
+        {
+            problems.append(ValidationMessage(field: "email", localizedMessage: NSLocalizedString("The format of email is invalid.", comment: "Registration error message")))
+        }
+    }
+    return problems
+}
+
+func validateName2(name: String?) -> [ValidationMessage] {
+    
+    var problems: [ValidationMessage] = []
+    if let input = name
+    {
+        let regEx = "\\A[a-zA-Z]{2,}\\z"
+        let regExTest = NSPredicate(format:"SELF MATCHES %@", regEx)
+        if (regExTest.evaluateWithObject(input))
+        {
+            return problems
+        }
+        else
+        {
+            problems.append(ValidationMessage(field: "email", localizedMessage: NSLocalizedString("The format of email is invalid.", comment: "Registration error message")))
+        }
+    }
+    return problems
+}
+
+
+func validateTitle2(title: String?) -> [ValidationMessage] {
+    
+    var problems: [ValidationMessage] = []
+    if let input = title
+    {
+        let regEx = "\\A[a-zA-Z0-9]{2,}\\z"
+        let regExTest = NSPredicate(format:"SELF MATCHES %@", regEx)
+        if (regExTest.evaluateWithObject(input))
+        {
+            return problems
+        }
+        else
+        {
+            problems.append(ValidationMessage(field: "email", localizedMessage: NSLocalizedString("The format of email is invalid.", comment: "Registration error message")))
+        }
+    }
+    return problems
+}
+
+func validateEmployeeNumber2(number: String?) -> [ValidationMessage] {
+    
+    var problems: [ValidationMessage] = []
+    if let input = number
+    {
+        let regEx = "\\d{1,}"
+        let regExTest = NSPredicate(format:"SELF MATCHES %@", regEx)
+        if (regExTest.evaluateWithObject(input))
+        {
+            return problems
+        }
+        else
+        {
+            problems.append(ValidationMessage(field: "email", localizedMessage: NSLocalizedString("The format of email is invalid.", comment: "Registration error message")))
+        }
+    }
+    return problems
+}
+
+func validateSkills2(skills: String?) -> [ValidationMessage] {
+    
+    var problems: [ValidationMessage] = []
+    if let input = skills
+    {
+        let regEx = "\\A[#,a-zA-Z0-9\\s]{2,}\\z"
+        let regExTest = NSPredicate(format:"SELF MATCHES %@", regEx)
+        if (regExTest.evaluateWithObject(input))
+        {
+            return problems
+        }
+        else
+        {
+            problems.append(ValidationMessage(field: "email", localizedMessage: NSLocalizedString("The format of email is invalid.", comment: "Registration error message")))
+        }
+    }
+    return problems
+}
+
+func validateBizDesc2(bizDesc: String?) -> [ValidationMessage] {
+    
+    var problems: [ValidationMessage] = []
+    if let input = bizDesc
+    {
+        let regEx = ".{1,}"
+        let regExTest = NSPredicate(format:"SELF MATCHES %@", regEx)
+        if (regExTest.evaluateWithObject(input))
+
+        {
+            return problems
+        }
+        else
+        {
+            problems.append(ValidationMessage(field: "email", localizedMessage: NSLocalizedString("The format of email is invalid.", comment: "Registration error message")))
+        }
+    }
+    return problems
+}
+
+
+
+
+
+enum Register: String, ErrorType {
+    
+    case InvalidEmail = "this is invalid email"
+    case InvalidPassword = "this is invalid Password"
+    case InvalidPasswordMatch = "this is invalid password match"
+    case InvalidBusiness = "this is invalid business"
     
 }
 
@@ -29,6 +204,7 @@ enum Register1: ErrorType
     case InvalidBizDesc
     
 }
+
 
 func isValidString(input: String?) throws -> String? {
     if let input = input {

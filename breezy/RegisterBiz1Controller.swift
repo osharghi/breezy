@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreLocation
+
 
 class RegisterBiz1Controller: UIViewController, UITextViewDelegate {
     
@@ -43,6 +45,31 @@ class RegisterBiz1Controller: UIViewController, UITextViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func getCoordinates(input: String?)
+    {
+        
+        if let input = input
+        {
+            let geocoder = CLGeocoder()
+            geocoder.geocodeAddressString(input, completionHandler: {(placemarks, error) -> Void in
+                if((error) != nil){
+                    print("Error", error)
+                }
+                if let placemark = placemarks?.first {
+                    let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
+                    print("locations = \(coordinates.latitude) \(coordinates.longitude)")
+                    print("DONE")
+                    //    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+                    //        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+                    //        print("locations = \(locValue.latitude) \(locValue.longitude)")
+                    //    }
+                }
+            })
+
+        }
+    }
+    
+    
     func inputValidation() -> [String:String]?
     {
         var userInfo: [String:String]?
@@ -60,6 +87,8 @@ class RegisterBiz1Controller: UIViewController, UITextViewDelegate {
                             {
                                 do
                                 {
+                                    getCoordinates(zipCode)
+                                    
                                     if let employeeNumber = try validateEmployeeNumber(employeeNumberTextField.text)
                                     {
                                         do

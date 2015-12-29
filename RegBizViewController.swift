@@ -17,6 +17,7 @@ class RegBizViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
 
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         errorLabel.text = ""
@@ -56,6 +57,74 @@ class RegBizViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func nextPressed2(sender: AnyObject) {
+        do
+        {
+            if let userInfo: [String:String] = try inputValidation2()
+            {
+                print("\(userInfo)")
+                let register = RegisterRequest1a(userDict: userInfo){
+                    result in
+                    
+                    if case . Success = result {
+                        //                print(user.userID)
+                        print("Success")
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.performSegueWithIdentifier("next1", sender: nil)
+                        }
+                    }
+                        //            else if case . Error(let reason) = result {
+                    else if case . Error = result {
+                        print("error")
+                        
+                    }
+                }
+                NetworkClient.instance.process(register)
+            }
+        }
+        catch let error as ValidationError
+        {
+            for element in error.problems
+            {
+                print(element.field)
+                print(element.localizedMessage)
+            }
+        }
+        catch
+        {
+            print("exhaustive error")
+        }
+    }
+    
+    func inputValidation2() throws -> [String:String]?
+    {
+        var userInfo: [String:String]?
+        var problems: [ValidationMessage] = []
+        
+        let p1 = validateString2(businessField.text)
+        problems.appendContentsOf(p1)
+
+        let p2 = validateEmail2(emailField.text)
+        problems.appendContentsOf(p2)
+        
+        let p3 = validatePassword2(passwordField.text)
+        problems.appendContentsOf(p3)
+        
+        let p4 = validatePasswordMatch2(passwordField.text, confirmed: password2Field.text)
+        problems.appendContentsOf(p4)
+        
+        if !problems.isEmpty {
+            throw ValidationError(problems: problems)
+        }
+        else {
+            print("validation succeeded")
+            userInfo = ["email": emailField.text!, "password": passwordField.text!, "business": businessField.text!]
+            return userInfo
+        }
+                
+    }
+    
     func inputValidation() -> [String:String]?
     {
         var userInfo: [String:String]?
@@ -78,36 +147,54 @@ class RegBizViewController: UIViewController {
                                         return userInfo
                                     }
                                 }
-                                catch let error
+                                catch let error as Register
                                 {
                                     //Password validation error
                                     print(error)
                                     errorLabel.text = "Invalid Password."
+
                                 }
+                            catch
+                            {
+                                
+                            }
                                 
                             }
                         }
-                        catch let error
+                        catch let error as Register
                         {
                             //Password match error
                             print(error)
                             errorLabel.text = "Passwords do not match."
                         }
+                        catch
+                        {
+                            
+                        }
                     }
                 }
-                catch let error
+                catch let error as Register
                 {
                     //Email Error
                     print(error)
                     errorLabel.text = "Please enter a valid email"
+                    errorLabel.text = error.rawValue
+
+                }
+                catch
+                {
+                    
                 }
             }
         }
-        catch let error
+        catch let error as Register
         {
             //business name error
             print(error)
             errorLabel.text = "Please enter a business name."
+        }
+        catch {
+            
         }
         
         return nil

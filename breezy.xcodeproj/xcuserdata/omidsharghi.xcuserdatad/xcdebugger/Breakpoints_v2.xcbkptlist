@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"
             endingLineNumber = "83"
-            landmarkName = "passwordsMatch1(_:input2:)"
+            landmarkName = "validateEmail2(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
             endingLineNumber = "87"
-            landmarkName = "passwordsMatch1(_:input2:)"
+            landmarkName = "validateName2(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

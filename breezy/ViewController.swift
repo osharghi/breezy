@@ -115,6 +115,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
+//    "https://maps.googleapis.com/maps/api/geocode/json?address=santa+cruz&components=country:ES&key=AIzaSyBtqXDLNs5CqqjDitDgFE2y69Ew-aJX_Bg"
+//    "https://maps.googleapis.com/maps/api/geocode/json?address=92677&components=country:US&key=AIzaSyBtqXDLNs5CqqjDitDgFE2y69Ew-aJX_Bg"
+    
+    
 //    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
 //        locationManager.startUpdatingLocation()
 //    }
